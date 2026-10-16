@@ -1,6 +1,6 @@
 # 💸 Assistente de Gastos pelo WhatsApp
 
-[![tests](https://github.com/SEU-USUARIO/gastos-whatsapp/actions/workflows/tests.yml/badge.svg)](https://github.com/SEU-USUARIO/gastos-whatsapp/actions/workflows/tests.yml)
+[![tests](https://github.com/KaueCelidonio/gastos-whatsapp/actions/workflows/tests.yml/badge.svg)](https://github.com/KaueCelidonio/gastos-whatsapp/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp-Cloud%20API-25D366?logo=whatsapp&logoColor=white)
@@ -170,7 +170,7 @@ tests/                 # 177 testes (pytest)
 Requer Python 3.12 ou mais recente.
 
 ```bash
-git clone https://github.com/SEU-USUARIO/gastos-whatsapp.git
+git clone https://github.com/KaueCelidonio/gastos-whatsapp.git
 cd gastos-whatsapp
 
 python -m venv .venv
