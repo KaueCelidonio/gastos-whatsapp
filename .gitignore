@@ -1,0 +1,23 @@
+# Segredos
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Banco local
+*.db
+*.sqlite3
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

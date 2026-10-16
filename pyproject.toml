@@ -1,0 +1,18 @@
+[project]
+name = "gastos-whatsapp"
+version = "0.1.0"
+description = "Assistente de controle de gastos pessoais pelo WhatsApp"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

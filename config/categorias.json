@@ -1,0 +1,12 @@
+{
+  "fallback": "Outros",
+  "categorias": {
+    "Alimentação": ["almoço", "janta", "jantar", "lanche", "café", "ifood", "restaurante", "padaria", "pizza", "hamburguer", "sorvete", "marmita"],
+    "Transporte": ["uber", "99", "ônibus", "metrô", "trem", "gasolina", "combustível", "posto", "estacionamento", "pedágio", "táxi"],
+    "Mercado": ["mercado", "supermercado", "feira", "atacadão", "hortifruti", "sacolão", "açougue"],
+    "Moradia": ["aluguel", "condomínio", "luz", "energia", "água", "internet", "gás", "iptu"],
+    "Saúde": ["farmácia", "remédio", "consulta", "médico", "dentista", "exame", "academia"],
+    "Lazer": ["cinema", "bar", "show", "teatro", "balada", "viagem", "jogo"],
+    "Assinaturas": ["netflix", "spotify", "prime", "disney", "hbo", "youtube", "icloud"]
+  }
+}
