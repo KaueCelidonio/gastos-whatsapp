@@ -14,6 +14,7 @@ class Categorizer:
     ) -> None:
         self.fallback = fallback
         self._categories = list(keywords_by_category)
+        self._keywords = {category: list(words) for category, words in keywords_by_category.items()}
         self._keyword_to_category: dict[str, str] = {}
         for category, keywords in keywords_by_category.items():
             for keyword in keywords:
@@ -28,6 +29,9 @@ class Categorizer:
     def categories(self) -> list[str]:
         """Todas as categorias, com a categoria padrão por último."""
         return [*self._categories, self.fallback]
+
+    def keywords(self, category: str) -> list[str]:
+        return list(self._keywords.get(category, []))
 
     def categorize(self, description: str) -> str:
         """Primeira palavra da descrição que for palavra-chave define a categoria."""
