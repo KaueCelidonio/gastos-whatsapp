@@ -5,10 +5,39 @@ import pytest
 
 from app.clock import FixedClock
 from app.config import BASE_DIR
+from app.db.database import build_engine, build_session_factory, init_db
 from app.interpretation.categorizer import Categorizer
 from app.interpretation.rule_based import RuleBasedInterpreter
+from app.repositories.sqlalchemy_repository import (
+    SqlAlchemyExpenseRepository,
+    SqlAlchemyProcessedMessageRepository,
+)
 
 TZ = ZoneInfo("America/Sao_Paulo")
+
+
+@pytest.fixture
+def session_factory():
+    engine = build_engine("sqlite://")
+    init_db(engine)
+    yield build_session_factory(engine)
+    engine.dispose()
+
+
+@pytest.fixture
+def session(session_factory):
+    with session_factory() as session:
+        yield session
+
+
+@pytest.fixture
+def expense_repo(session) -> SqlAlchemyExpenseRepository:
+    return SqlAlchemyExpenseRepository(session)
+
+
+@pytest.fixture
+def processed_repo(session) -> SqlAlchemyProcessedMessageRepository:
+    return SqlAlchemyProcessedMessageRepository(session)
 
 
 @pytest.fixture
